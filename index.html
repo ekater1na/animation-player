@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Animation Player</title>    
+        <link rel="stylesheet" type="text/css" href="src/stylesheets/style.css">
+    </head>
+
+    <body>
+
+        <header class="header">
+            <h1 id="header">CodeJam - Animation Player</h1>
+        </header>
+
+        <main class="main">
+            <article class="main-workspace">
+                <section class="main-workspace-tools">
+                    <div class="main-workspace-tools-wrapper">
+                        <ul class="tools-items">
+                            <li class="tools">
+                                <button class="tools-button" id="bucket">
+                                    <img src="src/pictures/paint-bucket-icon.svg" alt="" class="tools-icon">
+                                </button>
+                            </li>
+                            <li class="tools">
+                                <button class="tools-button" id="color_picker">
+                                    <img src="src/pictures/eye-dropper-icon.svg" alt="" class="tools-icon">
+                                </button>
+                            </li>
+                            <li class="tools">
+                                <button class="tools-button">
+                                    <img src="src/pictures/move-icon.svg" alt="" class="tools-icon">
+                                </button>
+                            </li>
+                            <li class="tools">
+                                <button class="tools-button" id="transform">
+                                    <img src="src/pictures/transform-icon.svg" alt="" class="tools-icon">
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="secondary-workspace-tools">
+                   <button class="add-frame-btn" id="add-frame-btn">Add frame</button>
+                   <input type="range" min="1" max="24" value="5" id="fpsRange">
+                </section>
+                
+                <section class="color">
+                    <div class="color-wrapper">
+                        <ul class="colors">
+                            
+                            <li class="colors-item">
+                                <div class="colors-display-wrapper">
+                                    <div class="colors-display preset-color" id="chosen_color"></div>
+                                </div>
+                                <p class="current-color"></p>
+                            </li>
+
+                            <li class="colors-item">
+                                <div class="colors-display-wrapper">
+                                    <div class="colors-display preset-color-0"></div>
+                                    </div>
+                                <p class="previous-color"></p>
+                            </li>
+
+                            <li class="colors-item">
+                                <div class="colors-display-wrapper">
+                                    <div class="colors-display preset-color-1"></div>
+                                </div>
+                                <p class="preset-color preset-color1"></p>
+                                </li>
+
+                            <li class="colors-item">
+                                <div class="colors-display-wrapper">
+                                    <div class="colors-display preset-color-2"></div>
+                                </div>
+                                <p class="preset-color preset-color2"></p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="canvas-wrapper">
+                    <div class="canvas" id="frames">
+                    </div>
+                </section>
+
+                <canvas id="preview"></canvas>
+
+            </article>
+
+        </main>
+
+        <script type="module" src="src/scripts/animations.js"></script>
+        <script   type="module" src="src/scripts/index.js"></script>
+    </body>
+
+    <footer>
+        
+    </footer>
+
+</html>
